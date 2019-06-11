@@ -16,6 +16,8 @@ public class ConfigJunit {
 
 
 
+
+
     @AfterAll
     public static void tearDownAll(TestInfo testInfo) {
         System.out.println("========== AfterAll =========");
