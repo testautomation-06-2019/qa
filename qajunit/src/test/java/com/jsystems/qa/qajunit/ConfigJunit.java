@@ -13,6 +13,7 @@ public class ConfigJunit {
         System.out.println("========== Test Name class name: " + testInfo.getTestClass().getClass().getSimpleName());
     }
 
+
     @AfterAll
     public static void tearDownAll(TestInfo testInfo) {
         System.out.println("========== AfterAll =========");
