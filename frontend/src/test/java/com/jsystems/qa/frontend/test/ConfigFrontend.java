@@ -1,5 +1,6 @@
-package com.jsystems.qa.frontend;
+package com.jsystems.qa.frontend.test;
 
+import com.jsystems.qa.frontend.Configuration;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -17,7 +18,7 @@ public class ConfigFrontend {
     public static void setUpAll() {
 //        WebDriverManager.chromedriver().setup();
         System.setProperty("webdriver.gecko.driver", ClassLoader.getSystemClassLoader().getResource("driver/geckodriver.exe").getFile());
-//        System.setProperty("webdriver.chrome.driver", ClassLoader.getSystemClassLoader().getResource("driver/chromedriver.exe").getFile());
+        System.setProperty("webdriver.chrome.driver", ClassLoader.getSystemClassLoader().getResource("driver/chromedriver.exe").getFile());
     }
 
     @BeforeEach
