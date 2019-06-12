@@ -45,11 +45,12 @@
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+        <!-- https://mvnrepository.com/artifact/com.typesafe/config -->
         <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
+            <groupId>com.typesafe</groupId>
+            <artifactId>config</artifactId>
         </dependency>
+
 
 
     </dependencies>
