@@ -1,4 +1,4 @@
-package com.jsystems.qa.frontend.test;
+package com.jsystems.qa.frontend.clasicfrontend.test;
 
 import com.jsystems.qa.frontend.Configuration;
 import org.junit.jupiter.api.AfterEach;

@@ -1,18 +1,13 @@
-package com.jsystems.qa.frontend.test;
+package com.jsystems.qa.frontend.clasicfrontend.test;
 
 import com.jsystems.qa.frontend.Configuration;
-import com.jsystems.qa.frontend.page.LoginPage;
-import com.jsystems.qa.frontend.page.MainWordporessPage;
-import com.jsystems.qa.frontend.page.UserPage;
+import com.jsystems.qa.frontend.clasicfrontend.page.LoginPage;
+import com.jsystems.qa.frontend.clasicfrontend.page.MainWordporessPage;
+import com.jsystems.qa.frontend.clasicfrontend.page.UserPage;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-
-import javax.swing.*;
 
 import static java.lang.Thread.sleep;
 import static org.junit.jupiter.api.Assertions.assertEquals;
