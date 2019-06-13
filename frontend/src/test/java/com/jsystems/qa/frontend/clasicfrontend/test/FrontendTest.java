@@ -1,9 +1,9 @@
-package com.jsystems.qa.qaapi.frontend.clasicfrontend.test;
+package com.jsystems.qa.frontend.clasicfrontend.test;
 
 import com.jsystems.qa.qaapi.frontend.Configuration;
-import com.jsystems.qa.qaapi.frontend.clasicfrontend.page.LoginPage;
-import com.jsystems.qa.qaapi.frontend.clasicfrontend.page.MainWordporessPage;
-import com.jsystems.qa.qaapi.frontend.clasicfrontend.page.UserPage;
+import com.jsystems.qa.frontend.clasicfrontend.page.LoginPage;
+import com.jsystems.qa.frontend.clasicfrontend.page.MainWordporessPage;
+import com.jsystems.qa.frontend.clasicfrontend.page.UserPage;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;

@@ -1,9 +1,8 @@
-package com.jsystems.qa.qaapi.frontend.cucumber.steps;
+package com.jsystems.qa.frontend.cucumber.steps;
 
 import com.jsystems.qa.qaapi.frontend.Configuration;
-import com.jsystems.qa.qaapi.frontend.cucumber.CucumberStepConfig;
+import com.jsystems.qa.frontend.cucumber.CucumberStepConfig;
 import com.jsystems.qa.frontend.cucumber.page.*;
-import com.jsystems.qa.qaapi.frontend.cucumber.page.*;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;

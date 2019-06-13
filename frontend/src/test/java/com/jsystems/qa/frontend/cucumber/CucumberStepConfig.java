@@ -1,4 +1,4 @@
-package com.jsystems.qa.qaapi.frontend.cucumber;
+package com.jsystems.qa.frontend.cucumber;
 
 import com.jsystems.qa.qaapi.frontend.Configuration;
 import cucumber.api.Scenario;

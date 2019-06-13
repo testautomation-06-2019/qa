@@ -1,4 +1,4 @@
-package com.jsystems.qa.qaapi.frontend.clasicfrontend.test;
+package com.jsystems.qa.frontend.clasicfrontend.test;
 
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;

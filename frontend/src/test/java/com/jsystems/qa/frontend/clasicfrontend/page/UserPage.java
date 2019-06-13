@@ -1,4 +1,4 @@
-package com.jsystems.qa.qaapi.frontend.cucumber.page;
+package com.jsystems.qa.frontend.clasicfrontend.page;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

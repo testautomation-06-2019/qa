@@ -1,4 +1,4 @@
-package com.jsystems.qa.qaapi.frontend.cucumber;
+package com.jsystems.qa.frontend.cucumber;
 
 
 import cucumber.api.CucumberOptions;
@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
 //                "@wordpress",
 //                "@login",
 //                "@userProfile",
-                "@notification"
+//                "@notification"
         }
 )
 public class RunTest {
