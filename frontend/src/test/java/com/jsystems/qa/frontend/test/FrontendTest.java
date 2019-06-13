@@ -4,6 +4,7 @@ import com.jsystems.qa.frontend.Configuration;
 import com.jsystems.qa.frontend.page.LoginPage;
 import com.jsystems.qa.frontend.page.MainWordporessPage;
 import com.jsystems.qa.frontend.page.UserPage;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -46,6 +47,7 @@ public class FrontendTest extends ConfigFrontend {
 
     }
 
+    @DisplayName("Login action test")
     @Test
     public void loginActionTest() {
 
