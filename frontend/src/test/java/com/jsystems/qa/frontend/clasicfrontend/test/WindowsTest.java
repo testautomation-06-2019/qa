@@ -37,6 +37,8 @@ public class WindowsTest extends ConfigFrontend {
 
         new WebDriverWait(driver, 100)
                 .until(ExpectedConditions.elementToBeClickable(by));
+        new WebDriverWait(driver, 100)
+                .until(ExpectedConditions.visibilityOfElementLocated(by));
 
         windowFrame.click();
 
