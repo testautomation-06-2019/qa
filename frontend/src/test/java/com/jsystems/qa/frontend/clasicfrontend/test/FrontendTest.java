@@ -4,10 +4,14 @@ import com.jsystems.qa.qaapi.frontend.Configuration;
 import com.jsystems.qa.frontend.clasicfrontend.page.LoginPage;
 import com.jsystems.qa.frontend.clasicfrontend.page.MainWordporessPage;
 import com.jsystems.qa.frontend.clasicfrontend.page.UserPage;
+import com.jsystems.qa.qaapi.model.device.User;
+import com.jsystems.qa.qaapi.service.ApiService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
+
+import java.util.List;
 
 import static java.lang.Thread.sleep;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -45,6 +49,8 @@ public class FrontendTest extends ConfigFrontend {
     @DisplayName("Login action test")
     @Test
     public void loginActionTest() {
+
+        List<User> users = ApiService.getUsers();
 
         wordporessPage = new MainWordporessPage(driver);
         wordporessPage.waitForVisibilityOfElement(wordporessPage.login, 30);

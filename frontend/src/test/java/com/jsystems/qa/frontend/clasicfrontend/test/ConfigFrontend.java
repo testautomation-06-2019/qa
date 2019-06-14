@@ -20,11 +20,12 @@ public class ConfigFrontend {
 
     String chromePath;
     String fireFoxPath;
-
     {
         try {
-            chromePath = Paths.get(getClass().getClassLoader().getResource("driver/chromedriver.exe").toURI()).toFile().getAbsolutePath();
-            fireFoxPath = Paths.get(getClass().getClassLoader().getResource("driver/geckodriver.exe").toURI()).toFile().getAbsolutePath();
+            chromePath = Paths.get(getClass().getClassLoader().getResource("driver/chromedriver.exe")
+                    .toURI()).toFile().getAbsolutePath();
+            fireFoxPath = Paths.get(getClass().getClassLoader().getResource("driver/geckodriver.exe")
+                    .toURI()).toFile().getAbsolutePath();
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }
@@ -32,13 +33,13 @@ public class ConfigFrontend {
 
     @BeforeAll
     public static void setUpAll() {
-//        WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().setup();
 }
 
     @BeforeEach
     public void setUpEach() {
-        System.setProperty("webdriver.chrome.driver", chromePath);
-        System.setProperty("webdriver.gecko.driver", fireFoxPath);
+//        System.setProperty("webdriver.chrome.driver", chromePath);
+//        System.setProperty("webdriver.gecko.driver", fireFoxPath);
 
         String browser = Configuration.getBROWSER();
 

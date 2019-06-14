@@ -10,9 +10,9 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
+        <module>qaapi</module>
         <module>qajunit</module>
         <module>frontend</module>
-        <module>qaapi</module>
     </modules>
 
     <properties>
@@ -115,7 +115,6 @@
                 <groupId>io.rest-assured</groupId>
                 <artifactId>rest-assured</artifactId>
                 <version>4.0.0</version>
-                <scope>test</scope>
             </dependency>
 
             <!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest-all -->
@@ -145,6 +144,34 @@
                 <artifactId>jackson-databind</artifactId>
                 <version>2.9.9</version>
             </dependency>
+
+            <dependency>
+                <groupId>oracle</groupId>
+                <artifactId>ojdbc6</artifactId>
+                <version>11.2.0.3</version>
+<!--                <scope>system</scope>-->
+<!--                <systemPath>${basedir}/lib/ojdbc6-11.2.0.3.jar</systemPath>-->
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/com.oracle/ojdbc6 -->
+<!--            <dependency>-->
+<!--                <groupId>com.oracle</groupId>-->
+<!--                <artifactId>ojdbc6</artifactId>-->
+<!--                <version>11.2.0.4.0-atlassian-hosted</version>-->
+<!--                &lt;!&ndash;                <scope>test</scope>&ndash;&gt;-->
+<!--            </dependency>-->
+            <!-- https://mvnrepository.com/artifact/com.oracle.jdbc/ojdbc6 -->
+<!--            <dependency>-->
+<!--                <groupId>com.oracle.jdbc</groupId>-->
+<!--                <artifactId>ojdbc6</artifactId>-->
+<!--                <version>11.1.0.6.0</version>-->
+<!--&lt;!&ndash;                <scope>runtime</scope>&ndash;&gt;-->
+<!--            </dependency>-->
+            <!-- https://mvnrepository.com/artifact/com.oracle.jdbc/ojdbc8 -->
+<!--            <dependency>-->
+<!--                <groupId>com.oracle.jdbc</groupId>-->
+<!--                <artifactId>ojdbc8</artifactId>-->
+<!--                <version>12.2.0.1</version>-->
+<!--            </dependency>-->
 
 
 

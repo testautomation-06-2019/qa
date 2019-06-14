@@ -32,14 +32,15 @@ public class CucumberStepConfig {
 
     @Before
     public static void setUpAll() {
-//        WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().setup();
+        WebDriverManager.firefoxdriver().setup();
     }
 
 
 
     public WebDriver setUp() {
-        System.setProperty("webdriver.chrome.driver", chromePath);
-        System.setProperty("webdriver.gecko.driver", fireFoxPath);
+//        System.setProperty("webdriver.chrome.driver", chromePath);
+//        System.setProperty("webdriver.gecko.driver", fireFoxPath);
         String browser = Configuration.getBROWSER();
 
         if(browser.equals("chrome")){
