@@ -42,6 +42,7 @@ public class FrontendTest extends ConfigFrontend {
         userPage.waitForVisibilityOfElement(userPage.userAvatar, 30);
         assertTrue(userPage.userAvatar.isDisplayed());
 
+
 //        Alert alert = driver.switchTo().alert();
 //        alert.accept();
 //        driver.switchTo().alert();
