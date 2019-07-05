@@ -9,6 +9,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.Set;
 
+import static java.lang.Thread.sleep;
+
 public class WindowsTest extends ConfigFrontend {
 
     @Test
@@ -20,12 +22,12 @@ public class WindowsTest extends ConfigFrontend {
 
         driver.get(contactUrl);
 
-        By by = By.id("mywindowframe");
+        By byMywindowframe = By.id("mywindowframe");
 
         new WebDriverWait(driver, 10)
-                .until(ExpectedConditions.visibilityOfElementLocated(by));
+                .until(ExpectedConditions.presenceOfElementLocated(byMywindowframe));
 
-        WebElement windowFrame = driver.findElement(by);
+        WebElement windowFrame = driver.findElement(byMywindowframe);
 
         firstPageWindowHandle = driver.getWindowHandle();
 
@@ -33,14 +35,23 @@ public class WindowsTest extends ConfigFrontend {
         int hyperlinkXCoordinate = windowFrame.getLocation().getX();
 
         JavascriptExecutor jsexecutor = (JavascriptExecutor) driver;
-        jsexecutor.executeScript("window.scrollBy(" + hyperlinkXCoordinate + "," + hyperlinkYCoordinate + ")", "");
+        jsexecutor.executeScript("arguments[0].scrollIntoView(true);", windowFrame);
+
 
         new WebDriverWait(driver, 100)
-                .until(ExpectedConditions.elementToBeClickable(by));
+                .until(ExpectedConditions.visibilityOf(windowFrame));
         new WebDriverWait(driver, 100)
-                .until(ExpectedConditions.visibilityOfElementLocated(by));
+                .until(ExpectedConditions.elementToBeClickable(windowFrame));
 
+        try {
+            sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         windowFrame.click();
+
+        new WebDriverWait(driver, 100)
+                .until(ExpectedConditions.numberOfWindowsToBe(2));
 
         Set<String> testPageWindowHandle = driver.getWindowHandles();
 
@@ -60,7 +71,7 @@ public class WindowsTest extends ConfigFrontend {
         driver.switchTo().window(firstPageWindowHandle);
 
         (new WebDriverWait(driver, 10))
-                .until(ExpectedConditions.visibilityOfElementLocated(by));
+                .until(ExpectedConditions.visibilityOfElementLocated(byMywindowframe));
 
     }
 

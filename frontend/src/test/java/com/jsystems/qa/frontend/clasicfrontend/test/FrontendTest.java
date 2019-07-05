@@ -24,6 +24,7 @@ public class FrontendTest extends ConfigFrontend {
 
     @Test
     public void firstFrontTest() {
+        driver.get(Configuration.BASE_URL);
         wordporessPage = new MainWordporessPage(driver);
         assertTrue(wordporessPage.buildEWebsite.isDisplayed());
         assertEquals(wordporessPage.buildEWebsite.getText(), "Build a website,");
@@ -34,6 +35,7 @@ public class FrontendTest extends ConfigFrontend {
 
     @Test
     public void loginTest() {
+        driver.get(Configuration.BASE_URL);
         login();
 
         userPage = new UserPage(driver);
@@ -49,8 +51,7 @@ public class FrontendTest extends ConfigFrontend {
     @DisplayName("Login action test")
     @Test
     public void loginActionTest() {
-
-        List<User> users = ApiService.getUsers();
+        driver.get(Configuration.BASE_URL);
 
         wordporessPage = new MainWordporessPage(driver);
         wordporessPage.waitForVisibilityOfElement(wordporessPage.login, 30);

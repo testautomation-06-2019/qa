@@ -1,9 +1,9 @@
 package com.jsystems.qa.frontend.cucumber;
 
 import com.jsystems.qa.qaapi.frontend.Configuration;
-import cucumber.api.Scenario;
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
+import io.cucumber.core.api.Scenario;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -31,16 +31,15 @@ public class CucumberStepConfig {
     }
 
     @Before
-    public static void setUpAll() {
-        WebDriverManager.chromedriver().setup();
-        WebDriverManager.firefoxdriver().setup();
+    public void setUpAll() {
+//        WebDriverManager.chromedriver().setup();
+//        WebDriverManager.firefoxdriver().setup();
+        System.setProperty("webdriver.chrome.driver", chromePath);
+        System.setProperty("webdriver.gecko.driver", fireFoxPath);
     }
 
-
-
     public WebDriver setUp() {
-//        System.setProperty("webdriver.chrome.driver", chromePath);
-//        System.setProperty("webdriver.gecko.driver", fireFoxPath);
+
         String browser = Configuration.getBROWSER();
 
         if(browser.equals("chrome")){

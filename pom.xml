@@ -87,26 +87,26 @@
                 <scope>test</scope>
             </dependency>
 
-            <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-java -->
+            <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
             <dependency>
-                <groupId>info.cukes</groupId>
+                <groupId>io.cucumber</groupId>
                 <artifactId>cucumber-java</artifactId>
-                <version>1.2.5</version>
+                <version>4.5.2</version>
             </dependency>
 
-            <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-junit -->
+            <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
             <dependency>
-                <groupId>info.cukes</groupId>
+                <groupId>io.cucumber</groupId>
                 <artifactId>cucumber-junit</artifactId>
-                <version>1.2.5</version>
+                <version>4.5.2</version>
                 <scope>test</scope>
             </dependency>
 
-            <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-picocontainer -->
+            <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer -->
             <dependency>
-                <groupId>info.cukes</groupId>
+                <groupId>io.cucumber</groupId>
                 <artifactId>cucumber-picocontainer</artifactId>
-                <version>1.2.5</version>
+                <version>4.5.2</version>
                 <scope>test</scope>
             </dependency>
 
@@ -143,14 +143,6 @@
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-databind</artifactId>
                 <version>2.9.9</version>
-            </dependency>
-
-            <dependency>
-                <groupId>oracle</groupId>
-                <artifactId>ojdbc6</artifactId>
-                <version>11.2.0.3</version>
-                <scope>system</scope>
-                <systemPath>${basedir}/lib/ojdbc6-11.2.0.3.jar</systemPath>
             </dependency>
 
         </dependencies>

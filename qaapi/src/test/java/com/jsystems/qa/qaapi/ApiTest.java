@@ -8,6 +8,7 @@ import com.jsystems.qa.qaapi.model.user.UserAzure;
 import com.jsystems.qa.qaapi.model.user.UserDb;
 import com.jsystems.qa.qaapi.service.ApiService;
 import io.restassured.RestAssured;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -104,6 +105,7 @@ public class ApiTest {
     }
 
     @Test
+    @Disabled
     public void dbTest() {
         UserDb userDb = UserDao.getOneById(1L);
         assertThat(userDb.getName()).isEqualTo("Piotr");

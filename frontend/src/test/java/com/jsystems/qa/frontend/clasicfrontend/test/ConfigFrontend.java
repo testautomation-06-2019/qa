@@ -17,7 +17,6 @@ public class ConfigFrontend {
 
     WebDriver driver;
 
-
     String chromePath;
     String fireFoxPath;
     {
@@ -33,13 +32,14 @@ public class ConfigFrontend {
 
     @BeforeAll
     public static void setUpAll() {
-        WebDriverManager.chromedriver().setup();
+//        WebDriverManager.chromedriver().setup();
+//        WebDriverManager.firefoxdriver().setup();
 }
 
     @BeforeEach
     public void setUpEach() {
-//        System.setProperty("webdriver.chrome.driver", chromePath);
-//        System.setProperty("webdriver.gecko.driver", fireFoxPath);
+        System.setProperty("webdriver.chrome.driver", chromePath);
+        System.setProperty("webdriver.gecko.driver", fireFoxPath);
 
         String browser = Configuration.getBROWSER();
 
@@ -50,8 +50,6 @@ public class ConfigFrontend {
         }
 
         setDriver();
-
-        driver.get(Configuration.BASE_URL);
     }
 
     @AfterEach
