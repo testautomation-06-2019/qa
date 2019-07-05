@@ -2,7 +2,6 @@ POST http://www.mocky.io/v2/5a690a1b2e000051007a73cb
 
 ContentType: application/json
 
-
 {
 	"name": "Piotr",
 	"surname": "Kowalski"
