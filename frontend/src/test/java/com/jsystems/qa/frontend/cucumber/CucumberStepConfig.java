@@ -4,7 +4,7 @@ import com.jsystems.qa.qaapi.frontend.Configuration;
 import io.cucumber.core.api.Scenario;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -32,6 +32,7 @@ public class CucumberStepConfig {
 
     @Before
     public void setUpAll() {
+        System.out.println("=========================== @Before  Cucumber Test  =======================================");
 //        WebDriverManager.chromedriver().setup();
 //        WebDriverManager.firefoxdriver().setup();
         System.setProperty("webdriver.chrome.driver", chromePath);
@@ -53,7 +54,7 @@ public class CucumberStepConfig {
     }
 
     private void setDriver() {
-        driver.manage().window().maximize();
+        driver.manage().window().setSize(new Dimension(1920,1080));
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);
     }
